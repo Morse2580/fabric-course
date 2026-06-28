@@ -1,0 +1,109 @@
+# MkDocs Material site config for the Fabric course.
+# Build:  pip install -r requirements.txt && mkdocs serve   (live preview at http://127.0.0.1:8000)
+# Deploy: mkdocs gh-deploy   (publishes to GitHub Pages)  — or use the included GitHub Action.
+
+site_name: Mastering Microsoft Fabric
+site_description: A practitioner's course — build, organize, and operate Microsoft Fabric well.
+site_author: Fabric Course
+# Content lives in docs/ (the MkDocs convention); site builds to site/.
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  icon:
+    logo: material/cube-outline
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant      # SPA-like instant loading
+    - navigation.tracking     # update URL with active anchor
+    - navigation.tabs         # top-level tabs
+    - navigation.sections     # group sections in sidebar
+    - navigation.top          # back-to-top button
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy       # copy button on code blocks
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  # Render ```mermaid fenced blocks as diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - "00 · Overview & Mental Model": 00-overview.md
+  - Foundations:
+      - "01 · Platform Foundations": 01-platform-foundations.md
+      - "02 · Workspaces & Domains": 02-workspaces-domains.md
+      - "03 · OneLake, Lakehouse & Warehouse": 03-onelake-lakehouse-warehouse.md
+      - "04 · Medallion Architecture": 04-medallion-architecture.md
+  - Engineering:
+      - "05 · Compute: Notebooks vs SJD": 05-compute-notebooks-sjd.md
+      - "06 · Ingestion & Transformation": 06-ingestion-transformation.md
+      - "07 · Orchestration & Real-Time": 07-orchestration-realtime.md
+      - "08 · Data Products & Ontology": 08-data-products-mesh.md
+  - Analytics & BI:
+      - "09 · Semantic Modeling & Direct Lake": 09-semantic-modeling-direct-lake.md
+      - "10 · KPIs & Metrics Layer": 10-kpis-metrics.md
+      - "11 · Reports vs Paginated": 11-reports-paginated.md
+  - Operate:
+      - "12 · Governance, Security & Cost": 12-governance-security-cost.md
+      - "13 · CI/CD & Deployment": 13-cicd-deployment.md
+      - "14 · The Operating Model": 14-operating-model.md
+  - Reference:
+      - "Diagram Conventions": DIAGRAM-CONVENTIONS.md
+      - "Screenshot Manifest": SCREENSHOTS.md
+      - "Screenshot Capture Labs": SCREENSHOT-LABS.md
+      - "Publishing this site": DOCS-SITE.md
+      - "99 · Tooling Appendix": 99-tooling-appendix.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/microsoft
+      link: https://app.fabric.microsoft.com

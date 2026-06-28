@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="940" viewBox="0 0 1180 940" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#222"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1180" height="940" fill="#ffffff"/>
+  <text x="30" y="40" font-size="22" font-weight="700" fill="#111">Solution-design notation (generic)</text>
+  <text x="30" y="64" font-size="13" fill="#666">A single visual language for capabilities, components, data products, events and domains. Industry-agnostic.</text>
+
+  <!-- ===================== STRUCTURE ===================== -->
+  <text x="30" y="104" font-size="16" font-weight="700" fill="#333">Structure</text>
+
+  <!-- Repository -->
+  <rect x="30" y="120" width="200" height="56" rx="10" fill="none" stroke="#e8862a" stroke-width="2" stroke-dasharray="3 4"/>
+  <text x="130" y="153" font-size="14" fill="#e8862a" text-anchor="middle" font-weight="600">Repository</text>
+
+  <!-- Capability -->
+  <rect x="260" y="120" width="200" height="56" rx="10" fill="none" stroke="#7b2ff7" stroke-width="2.5"/>
+  <text x="360" y="153" font-size="14" fill="#7b2ff7" text-anchor="middle" font-weight="600">Capability</text>
+
+  <!-- Deployable unit -->
+  <rect x="490" y="120" width="200" height="56" rx="10" fill="none" stroke="#2aa3e8" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="590" y="153" font-size="14" fill="#2aa3e8" text-anchor="middle" font-weight="600">Deployable unit</text>
+
+  <!-- AC -->
+  <rect x="720" y="120" width="200" height="56" rx="10" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="820" y="149" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Application Component (AC)</text>
+  <text x="820" y="166" font-size="10" fill="#888" text-anchor="middle">a service / autonomous component</text>
+
+  <!-- Data product (hexagon + domain tab) -->
+  <polygon points="965,148 990,120 1110,120 1135,148 1110,176 990,176" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="1050" y="146" font-size="13" fill="#111" text-anchor="middle" font-weight="600">Data product</text>
+  <rect x="1015" y="176" width="70" height="22" rx="6" fill="none" stroke="#111" stroke-width="1.5"/>
+  <text x="1050" y="191" font-size="10" fill="#444" text-anchor="middle">Domain</text>
+
+  <!-- ===================== DATA ===================== -->
+  <text x="30" y="248" font-size="16" font-weight="700" fill="#333">Data &amp; persistence</text>
+
+  <!-- Database cylinder -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <ellipse cx="90" cy="282" rx="42" ry="13"/>
+    <path d="M48,282 L48,352"/>
+    <path d="M132,282 L132,352"/>
+    <path d="M48,352 a42,13 0 0 0 84,0"/>
+  </g>
+  <text x="90" y="378" font-size="12" fill="#111" text-anchor="middle">Database</text>
+
+  <!-- Table attached -->
+  <rect x="150" y="278" width="230" height="70" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="164" y="300" font-size="13" fill="#111" font-weight="600">Table</text>
+  <text x="176" y="322" font-size="11" fill="#444">• property</text>
+  <text x="176" y="338" font-size="11" fill="#444">• property</text>
+  <circle cx="366" cy="292" r="9" fill="#34c759" stroke="#1c8c3a" stroke-width="1.5"/>
+
+  <!-- AC writes / reads -->
+  <rect x="470" y="262" width="180" height="40" rx="10" fill="none" stroke="#111" stroke-width="1.6"/>
+  <text x="560" y="286" font-size="11" fill="#111" text-anchor="middle">AC that writes to a table</text>
+  <rect x="690" y="262" width="180" height="40" rx="10" fill="none" stroke="#111" stroke-width="1.6"/>
+  <text x="780" y="286" font-size="11" fill="#111" text-anchor="middle">AC that only reads a table</text>
+
+  <!-- target table for read/write -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <ellipse cx="610" cy="350" rx="34" ry="10"/>
+    <path d="M576,350 L576,392"/><path d="M644,350 L644,392"/>
+    <path d="M576,392 a34,10 0 0 0 68,0"/>
+  </g>
+  <rect x="650" y="346" width="170" height="48" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="664" y="366" font-size="11" fill="#111" font-weight="600">Table</text>
+  <text x="664" y="384" font-size="10" fill="#444">• property</text>
+  <circle cx="808" cy="356" r="7" fill="#34c759" stroke="#1c8c3a" stroke-width="1.3"/>
+  <path d="M560,302 C560,326 600,330 620,346" stroke="#111" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M780,302 C780,326 740,332 712,346" stroke="#111" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+  <text x="470" y="330" font-size="10" fill="#888">solid arrow into table = writes · into AC = reads</text>
+
+  <!-- Endpoint -->
+  <rect x="900" y="262" width="250" height="86" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="914" y="286" font-size="12" fill="#111" font-weight="600">EndpointName</text>
+  <text x="914" y="308" font-size="11" fill="#444">Request: { }</text>
+  <text x="914" y="328" font-size="11" fill="#444">Response: { }</text>
+  <circle cx="1136" cy="278" r="9" fill="#ff3b30" stroke="#b3271e" stroke-width="1.5"/>
+  <text x="900" y="364" font-size="10" fill="#888">an API endpoint</text>
+
+  <!-- ===================== MESSAGES ===================== -->
+  <text x="30" y="452" font-size="16" font-weight="700" fill="#333">Messages &amp; contracts</text>
+  <text x="30" y="472" font-size="11" fill="#888">Dotted box = a message contract. Payload uses { } (object), versioned with a V&lt;n&gt; suffix.</text>
+
+  <g font-size="11">
+    <rect x="30" y="486" width="330" height="40" rx="9" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="2 3"/>
+    <text x="195" y="503" fill="#111" text-anchor="middle" font-weight="600">[Business] event</text>
+    <text x="195" y="519" fill="#555" text-anchor="middle">{ SomeId:Guid, OtherId:Guid, SomeInt:Int }</text>
+
+    <rect x="30" y="536" width="330" height="40" rx="9" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="2 3"/>
+    <text x="195" y="553" fill="#111" text-anchor="middle" font-weight="600">[Domain] event</text>
+    <text x="195" y="569" fill="#555" text-anchor="middle">{ SomeId:Guid, OtherId:Guid, SomeInt:Int }</text>
+
+    <rect x="380" y="486" width="330" height="40" rx="9" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="2 3"/>
+    <text x="545" y="503" fill="#111" text-anchor="middle" font-weight="600">[Command] DoSomethingV1</text>
+    <text x="545" y="519" fill="#555" text-anchor="middle">{ SomeId:Guid, OtherId:Guid, SomeInt:Int }</text>
+
+    <rect x="380" y="536" width="160" height="40" rx="9" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="2 3"/>
+    <text x="460" y="553" fill="#111" text-anchor="middle" font-weight="600">[Request]</text>
+    <text x="460" y="569" fill="#555" text-anchor="middle">{ ... }</text>
+
+    <rect x="550" y="536" width="160" height="40" rx="9" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="2 3"/>
+    <text x="630" y="553" fill="#111" text-anchor="middle" font-weight="600">[Response]</text>
+    <text x="630" y="569" fill="#555" text-anchor="middle">{ ... }</text>
+  </g>
+
+  <!-- ===================== INTERACTIONS ===================== -->
+  <text x="770" y="452" font-size="16" font-weight="700" fill="#333">Interactions</text>
+  <line x1="770" y1="486" x2="870" y2="486" stroke="#111" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="885" y="490" font-size="12" fill="#333">Synchronous</text>
+  <line x1="770" y1="516" x2="870" y2="516" stroke="#111" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#arrow)"/>
+  <text x="885" y="520" font-size="12" fill="#333">Asynchronous</text>
+  <text x="770" y="556" font-size="11" fill="#888">An interaction can be an event,</text>
+  <text x="770" y="572" font-size="11" fill="#888">a command, a request, …</text>
+
+  <!-- ===================== STATUS ===================== -->
+  <text x="30" y="648" font-size="16" font-weight="700" fill="#333">Status dots (top-right of any node)</text>
+  <circle cx="44" cy="676" r="9" fill="#34c759" stroke="#1c8c3a" stroke-width="1.5"/>
+  <text x="60" y="681" font-size="12" fill="#333">Done / Exists</text>
+  <circle cx="200" cy="676" r="9" fill="#ff9f0a" stroke="#b5710a" stroke-width="1.5"/>
+  <text x="216" y="681" font-size="12" fill="#333">In progress</text>
+  <circle cx="356" cy="676" r="9" fill="#ff3b30" stroke="#b3271e" stroke-width="1.5"/>
+  <text x="372" y="681" font-size="12" fill="#333">Not started / Doesn't exist</text>
+
+  <!-- ===================== ACTORS & EXTERNALS ===================== -->
+  <text x="30" y="744" font-size="16" font-weight="700" fill="#333">Actors, models &amp; external systems</text>
+
+  <!-- Actor -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <circle cx="70" cy="788" r="13"/>
+    <path d="M70,801 L70,838"/>
+    <path d="M44,814 L96,814"/>
+    <path d="M70,838 L52,866"/>
+    <path d="M70,838 L88,866"/>
+  </g>
+  <text x="70" y="888" font-size="12" fill="#333" text-anchor="middle">Actor</text>
+
+  <!-- Model / Aggregate -->
+  <rect x="180" y="772" width="150" height="100" rx="2" fill="none" stroke="#888" stroke-width="3"/>
+  <circle cx="255" cy="772" r="20" fill="#fff" stroke="#888" stroke-width="3"/>
+  <text x="255" y="779" font-size="17" fill="#111" text-anchor="middle" font-weight="700">M</text>
+  <text x="205" y="826" font-size="12" fill="#444">• prop</text>
+  <text x="255" y="892" font-size="12" fill="#333" text-anchor="middle">Model / Aggregate</text>
+
+  <!-- Other domain (gear) -->
+  <g transform="translate(470,820)" fill="#111">
+    <path d="M0,-34 l7,0 l3,10 a26,26 0 0 1 8,4 l10,-4 l5,5 l-4,10 a26,26 0 0 1 4,8 l10,3 l0,7 l-10,3 a26,26 0 0 1 -4,8 l4,10 l-5,5 l-10,-4 a26,26 0 0 1 -8,4 l-3,10 l-7,0 l-3,-10 a26,26 0 0 1 -8,-4 l-10,4 l-5,-5 l4,-10 a26,26 0 0 1 -4,-8 l-10,-3 l0,-7 l10,-3 a26,26 0 0 1 4,-8 l-4,-10 l5,-5 l10,4 a26,26 0 0 1 8,-4 z"/>
+    <circle cx="0" cy="0" r="12" fill="#fff"/>
+  </g>
+  <text x="470" y="892" font-size="12" fill="#333" text-anchor="middle">Other domain</text>
+
+  <!-- External (cloud) -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M650,840 a26,26 0 0 1 8,-50 a30,30 0 0 1 56,6 a22,22 0 0 1 4,44 z"/>
+  </g>
+  <text x="690" y="822" font-size="12" fill="#333" text-anchor="middle">External</text>
+  <text x="690" y="892" font-size="12" fill="#333" text-anchor="middle">External system</text>
+
+  <!-- "Something" note -->
+  <text x="820" y="800" font-size="12" fill="#666">"Something" can be a system,</text>
+  <text x="820" y="818" font-size="12" fill="#666">an AC, a Domain, an operating</text>
+  <text x="820" y="836" font-size="12" fill="#666">company (opco), …</text>
+  <rect x="820" y="852" width="300" height="40" rx="6" fill="#fff7cc" stroke="#e0c200" stroke-width="1.2"/>
+  <text x="834" y="869" font-size="11" fill="#7a6a00">Tip: payloads use { } (objects), not [ ];</text>
+  <text x="834" y="884" font-size="11" fill="#7a6a00">version contracts with a V&lt;n&gt; suffix.</text>
+</svg>

@@ -1,0 +1,7 @@
+# Docs-site toolchain — install with:  pip install -r requirements.txt
+mkdocs-material>=9.5
+pymdown-extensions>=10.7
+# Mermaid renders client-side via Material's superfences; no extra plugin needed.
+# Optional niceties:
+# mkdocs-minify-plugin       # smaller HTML/CSS/JS
+# mkdocs-git-revision-date-localized-plugin   # "last updated" stamps

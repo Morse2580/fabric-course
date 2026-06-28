@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="640" viewBox="0 0 1160 640" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#222"/>
+    </marker>
+  </defs>
+  <rect width="1160" height="640" fill="#ffffff"/>
+  <text x="30" y="38" font-size="20" font-weight="700" fill="#111">Connecting Fabric to external sources</text>
+  <text x="30" y="60" font-size="12" fill="#777">Five connection styles, mapped to the generic notation. Choose by: copy vs. reference, batch vs. live, and where the source lives.</text>
+
+  <!-- External sources column (clouds) -->
+  <text x="120" y="100" font-size="13" font-weight="700" fill="#333" text-anchor="middle">External sources</text>
+  <!-- cloud helper positions -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M70,170 a22,22 0 0 1 7,-42 a26,26 0 0 1 48,5 a19,19 0 0 1 3,37 z"/>
+    <path d="M70,260 a22,22 0 0 1 7,-42 a26,26 0 0 1 48,5 a19,19 0 0 1 3,37 z"/>
+    <path d="M70,350 a22,22 0 0 1 7,-42 a26,26 0 0 1 48,5 a19,19 0 0 1 3,37 z"/>
+    <path d="M70,440 a22,22 0 0 1 7,-42 a26,26 0 0 1 48,5 a19,19 0 0 1 3,37 z"/>
+    <path d="M70,530 a22,22 0 0 1 7,-42 a26,26 0 0 1 48,5 a19,19 0 0 1 3,37 z"/>
+  </g>
+  <text x="100" y="160" font-size="11" fill="#333" text-anchor="middle">ADLS / S3 / GCS</text>
+  <text x="100" y="250" font-size="11" fill="#333" text-anchor="middle">On-prem DB</text>
+  <text x="100" y="340" font-size="11" fill="#333" text-anchor="middle">Azure SQL /</text>
+  <text x="100" y="354" font-size="11" fill="#333" text-anchor="middle">Cosmos / Snowflake</text>
+  <text x="100" y="430" font-size="11" fill="#333" text-anchor="middle">SaaS / REST API</text>
+  <text x="100" y="520" font-size="11" fill="#333" text-anchor="middle">Kafka / Event Hubs</text>
+
+  <!-- Mechanism column (ACs) -->
+  <text x="470" y="100" font-size="13" font-weight="700" fill="#333" text-anchor="middle">Connection mechanism (AC)</text>
+
+  <rect x="320" y="130" width="300" height="44" rx="10" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="470" y="151" font-size="12" fill="#111" text-anchor="middle" font-weight="600">Shortcut (reference, no copy)</text>
+  <text x="470" y="167" font-size="9" fill="#888" text-anchor="middle">delegated connection · optional cache</text>
+
+  <rect x="320" y="218" width="300" height="44" rx="10" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="470" y="239" font-size="12" fill="#111" text-anchor="middle" font-weight="600">On-prem Data Gateway</text>
+  <text x="470" y="255" font-size="9" fill="#888" text-anchor="middle">+ Copy job / Dataflow / shortcut</text>
+
+  <rect x="320" y="306" width="300" height="44" rx="10" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="470" y="327" font-size="12" fill="#111" text-anchor="middle" font-weight="600">Mirroring (live replica)</text>
+  <text x="470" y="343" font-size="9" fill="#888" text-anchor="middle">near-real-time CDC into OneLake</text>
+
+  <rect x="320" y="394" width="300" height="44" rx="10" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="470" y="415" font-size="12" fill="#111" text-anchor="middle" font-weight="600">Pipeline Copy / Dataflow Gen2</text>
+  <text x="470" y="431" font-size="9" fill="#888" text-anchor="middle">batch copy / low-code transform</text>
+
+  <rect x="320" y="482" width="300" height="44" rx="10" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="470" y="503" font-size="12" fill="#111" text-anchor="middle" font-weight="600">Eventstream (streaming)</text>
+  <text x="470" y="519" font-size="9" fill="#888" text-anchor="middle">continuous ingest</text>
+
+  <!-- source -> mechanism arrows -->
+  <line x1="135" y1="148" x2="320" y2="150" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="135" y1="238" x2="320" y2="238" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="135" y1="328" x2="320" y2="326" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="135" y1="418" x2="320" y2="414" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="135" y1="508" x2="320" y2="502" stroke="#111" stroke-width="1.6" stroke-dasharray="8 5" marker-end="url(#ar)"/>
+
+  <!-- OneLake target -->
+  <rect x="760" y="150" width="360" height="360" rx="16" fill="none" stroke="#2aa3e8" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="940" y="178" font-size="13" fill="#2aa3e8" text-anchor="middle" font-weight="700">Fabric · OneLake (Bronze)</text>
+
+  <g stroke="#111" stroke-width="2" fill="none">
+    <ellipse cx="940" cy="240" rx="60" ry="16"/>
+    <path d="M880,240 L880,330"/><path d="M1000,240 L1000,330"/>
+    <path d="M880,330 a60,16 0 0 0 120,0"/>
+  </g>
+  <text x="940" y="290" font-size="13" fill="#111" text-anchor="middle">🟫 Lakehouse</text>
+  <rect x="820" y="370" width="240" height="56" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="940" y="394" font-size="12" fill="#111" text-anchor="middle" font-weight="600">raw_src_entity</text>
+  <text x="940" y="412" font-size="10" fill="#444" text-anchor="middle">• identity · • _ingested_at</text>
+  <circle cx="1048" cy="382" r="8" fill="#34c759" stroke="#1c8c3a" stroke-width="1.4"/>
+  <text x="940" y="470" font-size="10" fill="#888" text-anchor="middle">shortcuts: data stays at source (referenced)</text>
+  <text x="940" y="486" font-size="10" fill="#888" text-anchor="middle">copy/mirror/stream: data lands in OneLake</text>
+
+  <!-- mechanism -> onelake -->
+  <line x1="620" y1="150" x2="760" y2="220" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="620" y1="238" x2="760" y2="250" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="620" y1="326" x2="760" y2="290" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="620" y1="414" x2="760" y2="340" stroke="#111" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="620" y1="502" x2="760" y2="380" stroke="#111" stroke-width="1.6" stroke-dasharray="8 5" marker-end="url(#ar)"/>
+
+  <text x="30" y="600" font-size="11" fill="#666">Rule of thumb: <tspan font-weight="700">Shortcut</tspan> when you can reference in place (cheapest) · <tspan font-weight="700">Mirror</tspan> for live DB replicas · <tspan font-weight="700">Copy/Dataflow</tspan> for batch · <tspan font-weight="700">Eventstream</tspan> for streaming · <tspan font-weight="700">Gateway</tspan> whenever the source is on-prem/VNet.</text>
+  <text x="30" y="622" font-size="10" fill="#aaa">Solid = synchronous/batch pull · dashed = asynchronous/streaming · dotted blue box = Fabric boundary (deployable). Legend: assets/notation-legend.svg</text>
+</svg>

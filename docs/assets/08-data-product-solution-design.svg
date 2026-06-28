@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="600" viewBox="0 0 1160 600" font-family="Inter, Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#222"/>
+    </marker>
+  </defs>
+  <rect width="1160" height="600" fill="#ffffff"/>
+  <text x="30" y="38" font-size="20" font-weight="700" fill="#111">Data product — solution design (generic notation)</text>
+  <text x="30" y="60" font-size="12" fill="#777">Source-aligned product: an external system feeds an ingestion component that writes Bronze; the product publishes an endpoint + a domain event.</text>
+
+  <!-- External system -->
+  <g stroke="#111" stroke-width="2" fill="none">
+    <path d="M70,180 a26,26 0 0 1 8,-50 a30,30 0 0 1 56,6 a22,22 0 0 1 4,44 z"/>
+  </g>
+  <text x="105" y="158" font-size="12" fill="#333" text-anchor="middle">External</text>
+  <text x="105" y="205" font-size="12" fill="#333" text-anchor="middle">Source system</text>
+
+  <!-- async event from source -->
+  <line x1="150" y1="150" x2="270" y2="150" stroke="#111" stroke-width="2" stroke-dasharray="8 5" marker-end="url(#a)"/>
+  <text x="210" y="140" font-size="10" fill="#888" text-anchor="middle">async ingest</text>
+
+  <!-- Capability box containing ingestion AC -->
+  <rect x="275" y="95" width="250" height="160" rx="12" fill="none" stroke="#7b2ff7" stroke-width="2.5"/>
+  <text x="400" y="116" font-size="12" fill="#7b2ff7" text-anchor="middle" font-weight="600">Capability: Ingestion</text>
+  <rect x="300" y="135" width="200" height="50" rx="10" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="400" y="165" font-size="12" fill="#111" text-anchor="middle">AC: Loader (writes Bronze)</text>
+  <circle cx="492" cy="143" r="8" fill="#34c759" stroke="#1c8c3a" stroke-width="1.4"/>
+  <text x="400" y="225" font-size="10" fill="#999" text-anchor="middle">idempotent · incremental · restartable</text>
+
+  <!-- write to bronze table -->
+  <line x1="525" y1="160" x2="600" y2="160" stroke="#111" stroke-width="1.8" marker-end="url(#a)"/>
+  <g stroke="#111" stroke-width="2" fill="none">
+    <ellipse cx="650" cy="135" rx="36" ry="11"/>
+    <path d="M614,135 L614,195"/><path d="M686,135 L686,195"/>
+    <path d="M614,195 a36,11 0 0 0 72,0"/>
+  </g>
+  <rect x="690" y="130" width="170" height="60" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="704" y="151" font-size="12" fill="#111" font-weight="600">raw_src_entity</text>
+  <text x="704" y="170" font-size="10" fill="#444">• identity cols</text>
+  <text x="704" y="184" font-size="10" fill="#444">• _ingested_at</text>
+  <circle cx="848" cy="142" r="8" fill="#34c759" stroke="#1c8c3a" stroke-width="1.4"/>
+  <text x="650" y="222" font-size="11" fill="#8a5a00" text-anchor="middle">🟫 Bronze (append-only)</text>
+
+  <!-- Data product hexagon -->
+  <polygon points="345,400 375,360 565,360 595,400 565,440 375,440" fill="none" stroke="#111" stroke-width="2.5"/>
+  <text x="470" y="395" font-size="15" fill="#111" text-anchor="middle" font-weight="700">Customer (data product)</text>
+  <text x="470" y="416" font-size="11" fill="#555" text-anchor="middle">entities + events · contract · quality gate</text>
+  <rect x="420" y="440" width="100" height="26" rx="7" fill="none" stroke="#111" stroke-width="1.8"/>
+  <text x="470" y="457" font-size="11" fill="#333" text-anchor="middle">Domain: Sales</text>
+
+  <!-- bronze to product (transform) -->
+  <path d="M730,200 C730,320 600,330 540,362" stroke="#111" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+  <text x="700" y="300" font-size="10" fill="#888">conform → silver → gold projections</text>
+
+  <!-- Endpoint output port -->
+  <rect x="700" y="330" width="240" height="86" rx="2" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="714" y="354" font-size="12" fill="#111" font-weight="600">GetCustomer endpoint</text>
+  <text x="714" y="376" font-size="11" fill="#444">Request: { customerId:Guid }</text>
+  <text x="714" y="396" font-size="11" fill="#444">Response: { ... }</text>
+  <circle cx="926" cy="346" r="8" fill="#ff9f0a" stroke="#b5710a" stroke-width="1.4"/>
+  <line x1="595" y1="395" x2="700" y2="375" stroke="#111" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="648" y="378" font-size="9" fill="#888">sync</text>
+
+  <!-- Domain event (async output) -->
+  <rect x="700" y="448" width="300" height="42" rx="9" fill="none" stroke="#111" stroke-width="1.4" stroke-dasharray="2 3"/>
+  <text x="850" y="465" font-size="11" fill="#111" text-anchor="middle" font-weight="600">[Domain] CustomerUpdatedV1</text>
+  <text x="850" y="481" font-size="10" fill="#555" text-anchor="middle">{ customerId:Guid, version:Int }</text>
+  <line x1="560" y1="430" x2="700" y2="465" stroke="#111" stroke-width="1.8" stroke-dasharray="8 5" marker-end="url(#a)"/>
+  <text x="630" y="452" font-size="9" fill="#888">async publish</text>
+
+  <!-- Consumers: another domain (gear) + actor -->
+  <g transform="translate(1060,400) scale(0.8)" fill="#111">
+    <path d="M0,-34 l7,0 l3,10 a26,26 0 0 1 8,4 l10,-4 l5,5 l-4,10 a26,26 0 0 1 4,8 l10,3 l0,7 l-10,3 a26,26 0 0 1 -4,8 l4,10 l-5,5 l-10,-4 a26,26 0 0 1 -8,4 l-3,10 l-7,0 l-3,-10 a26,26 0 0 1 -8,-4 l-10,4 l-5,-5 l4,-10 a26,26 0 0 1 -4,-8 l-10,-3 l0,-7 l10,-3 a26,26 0 0 1 4,-8 l-4,-10 l5,-5 l10,4 a26,26 0 0 1 8,-4 z"/>
+    <circle cx="0" cy="0" r="12" fill="#fff"/>
+  </g>
+  <text x="1060" y="452" font-size="11" fill="#333" text-anchor="middle">Finance domain</text>
+  <line x1="1000" y1="468" x2="1030" y2="430" stroke="#111" stroke-width="1.8" stroke-dasharray="8 5" marker-end="url(#a)"/>
+
+  <g stroke="#111" stroke-width="2" fill="none" transform="translate(1055,150)">
+    <circle cx="0" cy="0" r="12"/>
+    <path d="M0,12 L0,46"/><path d="M-22,24 L22,24"/>
+    <path d="M0,46 L-16,72"/><path d="M0,46 L16,72"/>
+  </g>
+  <text x="1055" y="240" font-size="11" fill="#333" text-anchor="middle">Analyst</text>
+  <line x1="942" y1="373" x2="1042" y2="200" stroke="#111" stroke-width="1.8" marker-end="url(#a)"/>
+  <text x="1010" y="300" font-size="9" fill="#888">queries via BI</text>
+
+  <!-- legend ref -->
+  <text x="30" y="585" font-size="10" fill="#aaa">Notation legend: assets/notation-legend.svg · solid = sync · dashed = async · dotted box = message contract · hexagon = data product · 🟢 done 🟠 in progress 🔴 not started</text>
+</svg>
