@@ -29,47 +29,6 @@ For data engineers &amp; analysts · the four decisions that matter
 Overview session · ~45 min
 </div>
 
-<style>
-.cover-slide { display: flex; flex-direction: column; justify-content: center; }
-.cover-slide .cover-title {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 3.4rem;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
-  margin-bottom: 1.2rem;
-}
-.cover-slide .cover-sub {
-  font-size: 1.35rem;
-  opacity: 0.92;
-  max-width: 38ch;
-  margin: 0 auto;
-}
-
-/* Branded chapter dividers — no more empty white banners */
-.slidev-layout.section,
-.cover-slide {
-  background: linear-gradient(135deg, #3f51b5 0%, #5e35b1 100%);
-  color: #fff;
-}
-.slidev-layout.section h1,
-.slidev-layout.section h2 { color: #fff; }
-.slidev-layout.section p { color: rgba(255,255,255,0.88); }
-.slidev-layout.section h1::after {
-  content: "";
-  display: block;
-  width: 64px; height: 4px;
-  background: rgba(255,255,255,0.6);
-  margin-top: 0.6rem; border-radius: 2px;
-}
-
-/* Content slides: vertically center the block so they aren't top-heavy with a big empty bottom */
-.slidev-layout.default {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-</style>
 
 ---
 layout: section
