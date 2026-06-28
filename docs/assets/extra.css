@@ -45,6 +45,21 @@
   border-radius: 12px;
 }
 
+/* ── Retractable left navigation ── */
+.nav-retract-btn { display: none; }
+
+@media screen and (min-width: 76.25em) {
+  /* show the toggle only on desktop (mobile already has the drawer hamburger) */
+  .nav-retract-btn { display: inline-flex; }
+
+  /* retract: hide the primary sidebar; content reflows to fill the row */
+  body.nav-retracted .md-sidebar--primary { display: none; }
+  body.nav-retracted .md-content { margin-left: 0; }
+
+  /* smooth content reflow */
+  .md-content { transition: max-width 0.2s ease; }
+}
+
 /* Slightly tighter, calmer headings */
 .md-typeset h2 {
   margin-top: 2.2rem;

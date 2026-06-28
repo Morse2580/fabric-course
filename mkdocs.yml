@@ -36,15 +36,15 @@ theme:
   features:
     - navigation.instant      # SPA-like instant loading
     - navigation.tracking     # update URL with active anchor
-    - navigation.tabs         # top-level tabs
-    - navigation.sections     # group sections in sidebar
-    - navigation.top          # back-to-top button
     - navigation.indexes
+    - navigation.top          # back-to-top button
     - toc.follow
     - search.suggest
     - search.highlight
     - content.code.copy       # copy button on code blocks
     - content.code.annotate
+    # NOTE: navigation.tabs/sections intentionally OFF so the whole tree
+    # lives in a collapsible left sidebar (retractable via the header button).
 
 markdown_extensions:
   - admonition
@@ -77,6 +77,9 @@ plugins:
 
 extra_css:
   - assets/extra.css
+
+extra_javascript:
+  - assets/nav-toggle.js
 
 nav:
   - Home: index.md
