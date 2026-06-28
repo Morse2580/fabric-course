@@ -1,6 +1,7 @@
-# Builds the MkDocs Material site and publishes it to GitHub Pages on every push to main.
+# Builds the MkDocs Material site AND the Slidev overview deck, then publishes both
+# to GitHub Pages. The docs are at the site root; the deck is nested under /slides/.
 # One-time setup: repo Settings → Pages → Source = "GitHub Actions".
-name: Deploy docs
+name: Deploy docs + slides
 
 on:
   push:
@@ -21,11 +22,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # --- Docs site (MkDocs Material) ---
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: mkdocs build --strict
+
+      # --- Overview deck (Slidev) → nested under /slides ---
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Build slides
+        working-directory: slides
+        env:
+          PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+        run: |
+          npm install --omit=dev --no-audit --no-fund
+          npx slidev build --base /fabric-course/slides/ --out dist
+      - name: Nest slides under site/slides
+        run: |
+          mkdir -p site/slides
+          cp -r slides/dist/* site/slides/
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

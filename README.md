@@ -97,6 +97,20 @@ See [DOCS-SITE.md](docs/DOCS-SITE.md) for the recommendation rationale, hosting 
 
 ---
 
+## Presentation (slides)
+
+A ~30-slide **overview deck** (built with [Slidev](https://sli.dev), structured like Microsoft's *Fabric Readiness* series) lives in [`slides/`](slides/):
+
+```bash
+cd slides && npm install && npm run dev     # present at http://localhost:3030
+npm run export                              # → PDF   (slides/Mastering-Fabric-Overview.pdf is committed)
+npm run export-pptx                         # → editable PowerPoint (see slides/README.md)
+```
+
+Published publicly alongside the docs at **`<pages-url>/slides/`** via the GitHub Action.
+
+---
+
 ## Following along in the Fabric portal
 
 Instead of static screenshots (which the Fabric UI quickly outdates), every UI step is an inline **🧭 In the Fabric portal** callout giving the exact click-path and what you'll see — for example:

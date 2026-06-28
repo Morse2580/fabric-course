@@ -6,3 +6,8 @@ __pycache__/
 .venv/
 # OS
 .DS_Store
+
+# Slidev
+slides/node_modules/
+slides/dist/
+slides/.slidev/

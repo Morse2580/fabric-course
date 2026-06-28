@@ -4,6 +4,8 @@
 
 This is not a feature tour. It's a **decision-and-practice framework**. For every major choice in Fabric — Lakehouse vs. Warehouse, Notebook vs. Spark Job Definition, Import vs. Direct Lake, Power BI vs. paginated reports, how to split workspaces, where to put bronze/silver/gold — you get a **decision rule, a recommended default, and the trade-offs**, then a hands-on walkthrough with diagrams and **exact Fabric portal navigation** (where to click, what you'll see).
 
+> 🖥️ **Overview deck:** there's a slide presentation summarizing the whole course at **[morse2580.github.io/fabric-course/slides/](https://morse2580.github.io/fabric-course/slides/)** (live) — built from this content, exportable to PDF/PowerPoint. See [Publishing this site](DOCS-SITE.md).
+
 ---
 
 ## Start here
