@@ -40,7 +40,7 @@ Other hosts: `mkdocs build` produces a static `site/` folder you can drop on **N
 
 ## To make it truly "better than the Fabric browser"
 
-1. **Add the screenshots** from [SCREENSHOTS.md](SCREENSHOTS.md) into `assets/` — visuals are what the raw Fabric docs do unevenly.
+1. **The inline _“In the Fabric portal”_ callouts** give every UI step as an exact click-path, so a brand-new dev can do it live in Fabric instead of squinting at a screenshot.
 2. **Keep the diagram notation consistent** ([DIAGRAM-CONVENTIONS.md](DIAGRAM-CONVENTIONS.md)) — one visual language across the whole site.
 3. **Enable the optional plugins** in `requirements.txt` (minify + "last updated" stamps) for polish.
 4. Consider a short **"Day 1" path** callout on the homepage so a brand-new dev knows the exact 5 pages to read before touching Fabric (00 → 01 → 02 → 03 → 04).

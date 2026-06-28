@@ -41,7 +41,7 @@ Tenant settings to enable (scope each to your SPN security group, **not** the wh
 
 > ✅ **2025–2026:** service principals can be **assigned to workspace roles** directly — the clean path for CI/CD. Prefer **SPN + workspace role** over user accounts for automation. Store secrets in **Azure Key Vault** and read them via `notebookutils.credentials` (Module 05).
 
-> 🖼️ **![SCREENSHOT: Admin portal → Tenant settings, "Service principals can use Fabric APIs" toggle enabled and scoped to a specific security group — findable on Microsoft Learn's Fabric admin/identity docs](assets/12-spn-tenant-setting.png)**
+> 🧭 **In the Fabric portal:** Settings ⚙ → **Admin portal** → **Tenant settings** → search **“service principal”** → enable **“Service principals can use Fabric APIs”**, scoped to a security group.
 
 ### 1.3 Control workspace creation
 Restrict who can create workspaces (a tenant setting) to a security group, and consider an **isolated dev workspace per developer**. Split **capacities by DTAP** (dev/test/prod).
@@ -172,7 +172,7 @@ flowchart TB
     FUAM --> CB[Chargeback per domain] & CP[Capacity planning] & GOV[Governance/adoption audits]
 ```
 
-> 🖼️ **![SCREENSHOT: The FUAM report overview page showing tenant-wide capacity utilization, workspace inventory, and activity trends — findable on the FUAM GitHub repo (microsoft/fabric-toolbox) readme/screenshots](assets/12-fuam-overview.png)**
+> 🧭 **In the Fabric portal:** Deploy **FUAM** (from the `microsoft/fabric-toolbox` repo) into a workspace; its report's overview page shows tenant-wide capacity utilization, inventory, and activity trends.
 
 ---
 

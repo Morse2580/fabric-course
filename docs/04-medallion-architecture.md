@@ -111,7 +111,7 @@ flowchart LR
 
 Use MLVs when your transforms are expressible in SQL and you want managed orchestration + DQ without hand-writing pipelines. Drop to notebooks (Module 05) when logic gets procedural or needs Python/ML.
 
-> 🖼️ **![SCREENSHOT: The materialized lake view lineage graph in a lakehouse, showing bronze→silver→gold dependency edges and refresh status (findable on Microsoft Learn's "materialized lake views" tutorial)](assets/04-materialized-lake-views.png)**
+> 🧭 **In the Fabric portal:** In a schema-enabled Lakehouse, create **materialized lake views**, then open the **lineage** view to see the bronze→silver→gold dependency graph and refresh status.
 
 ---
 

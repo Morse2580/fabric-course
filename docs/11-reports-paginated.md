@@ -64,7 +64,7 @@ flowchart LR
     WS --> APP[Power BI app]
 ```
 
-> 🖼️ **![SCREENSHOT: Power BI Report Builder showing a tablix with a parameters pane and a "Connect to semantic model / SQL endpoint" data-source dialog — findable on Microsoft Learn's "paginated reports in Power BI Report Builder" page](assets/11-report-builder.png)**
+> 🧭 **In the Fabric portal:** Author paginated reports in the free **Power BI Report Builder** desktop app: add a **tablix**, a **Parameters** pane, and a **data source** (semantic model or SQL endpoint); publish to your Fabric workspace.
 
 > **Lab 11.1 — A paginated operational report.** In Report Builder, connect to your `WH_STORE_Gold` SQL endpoint, build a parameterized "Orders by Region" tablix with repeating headers and a date-range parameter, publish to your workspace, and set up a weekly PDF **subscription**.
 

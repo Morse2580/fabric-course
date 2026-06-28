@@ -36,7 +36,7 @@ flowchart LR
 
 > **Best practice:** **one isolated dev workspace per developer** (branch-out), so people don't trample shared state. Map the shared/integration workspace to `main`.
 
-> 🖼️ **![SCREENSHOT: Workspace settings → Git integration, connected to an Azure DevOps repo and branch, showing the source-control status (committed/uncommitted) on items — capture from your own tenant](assets/13-git-integration.png)**
+> 🧭 **In the Fabric portal:** Workspace → **Workspace settings** → **Git integration**; connect an Azure DevOps/GitHub repo + branch, then items show source-control status (committed/uncommitted).
 
 ---
 
@@ -58,7 +58,7 @@ flowchart LR
     RULES -.applied at.-> P
 ```
 
-> 🖼️ **![SCREENSHOT: The Deployment pipelines view showing Dev/Test/Prod stages with item compare (changed/new/identical) and the "Deployment rules" config for a data source — findable on Microsoft Learn's deployment-pipelines docs](assets/13-deployment-pipeline.png)**
+> 🧭 **In the Fabric portal:** Left nav → **Workspaces** → **+ New → Deployment pipeline**. Assign workspaces to **Development / Test / Production**; the compare view marks items changed/new/identical, and **Deployment rules** swap sources per stage.
 
 ---
 

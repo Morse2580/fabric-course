@@ -41,7 +41,7 @@ Every activity supports **retry count + retry interval + timeout**, and **depend
 
 > **Pattern — metadata-driven pipeline:** store a control table of `(source, target, watermark, load_type)`, **Lookup** it, **ForEach** the rows, and call a parameterized notebook per entity. One pipeline ingests *N* tables; adding a table is a row, not new code. (See the FMD Framework in the [tooling appendix](99-tooling-appendix.md).)
 
-> 🖼️ **![SCREENSHOT: A Data Factory pipeline canvas showing Copy → Notebook → ForEach(runMultiple) → Maintenance → Refresh SQL endpoint, with the activity settings pane open on retry/timeout — capture from your own tenant](assets/07-pipeline-canvas.png)**
+> 🧭 **In the Fabric portal:** Workspace → **+ New item** → **Data pipeline**. From the **Activities** ribbon add **Copy → Notebook → … → Refresh SQL endpoint** and connect them on success; each activity's **Settings** tab has retry/timeout.
 
 ---
 
@@ -63,7 +63,7 @@ Left nav → **Monitor**: a unified view of **every run** across the tenant — 
 - First stop for *"did my job run?"* and *"why is it slow?"*.
 - Filter by item type, status, time. Find `TableMaintenance` entries to confirm OPTIMIZE/VACUUM ran.
 
-> 🖼️ **![SCREENSHOT: Monitoring hub with a pipeline run expanded to show per-activity status, duration, and a link into the Spark UI — capture from your own tenant](assets/07-monitoring-hub.png)**
+> 🧭 **In the Fabric portal:** Left nav → **Monitor** → open a **pipeline run** to see per-activity status/duration and a link into the **Spark UI**.
 
 For **tenant-wide, near-real-time** capacity/activity monitoring beyond per-run detail, install **FUAM** (Fabric Unified Admin Monitoring) — covered in [Module 12 §5](12-governance-security-cost.md).
 

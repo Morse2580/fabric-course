@@ -25,7 +25,7 @@ Three ways to get a capacity:
 | **Reserved capacity (F-SKU)** | A committed F2…F2048 capacity, billed hourly or reserved (1-yr). Pause/resume. | Production. |
 | **Pay-as-you-go (Azure)** | Spin up an F-SKU in Azure, billed per second, pausable. | Bursty / dev / scale tests. |
 
-> 🖼️ **![SCREENSHOT: app.fabric.microsoft.com → account manager (top-right) → "Start trial" dialog showing the Fabric trial activation](assets/01-start-trial.png)**
+> 🧭 **In the Fabric portal:** Top-right **account manager** (your initials) → **Start trial** to activate a Fabric trial capacity.
 
 > **Lab 1.0 — Get set up.** Go to [app.fabric.microsoft.com](https://app.fabric.microsoft.com), start a Fabric trial, and confirm you see "Trial" next to your name. You're ready.
 
@@ -111,7 +111,7 @@ Everything you create is an **item**, living in a workspace. Knowing the catalog
 | **Power BI** | Semantic model, Report, Paginated report, Dashboard, Dataflow Gen1, Scorecard/Metrics, Datamart |
 | **Cross-cutting** | Deployment pipeline, Variable library, User Data Functions, Data Agent (AI), GraphQL API |
 
-> 🖼️ **![SCREENSHOT: The "+ New item" dialog inside a workspace, showing the categorized list of all item types](assets/01-new-item-menu.png)**
+> 🧭 **In the Fabric portal:** Open a workspace → **+ New item** (top toolbar) to see the full item gallery grouped by *Store data / Prepare data / Analyze and train data / …*.
 
 You don't need to memorize this — but notice the pattern: **storage items** (lakehouse, warehouse, eventhouse) hold data in OneLake; **compute items** (notebook, pipeline, dataflow, SJD) act on it; **serving items** (semantic model, report) expose it.
 
@@ -127,7 +127,7 @@ We go deep on workspace *strategy* in Module 02. For now, create one demo worksp
 > 3. Expand **Advanced** → **License mode** → assign your **Trial / Fabric capacity**. *(If you skip this, items that need capacity won't run.)*
 > 4. Create it. You now have an empty workspace bound to a capacity.
 
-> 🖼️ **![SCREENSHOT: The "Create a workspace" pane with the name filled in and the Advanced → License mode → Fabric capacity dropdown expanded](assets/01-create-workspace.png)**
+> 🧭 **In the Fabric portal:** Left nav → **Workspaces** → **+ New workspace**. Name it, expand **▸ Advanced**, and set **License mode → Fabric capacity** (or Trial).
 
 ### Workspace roles (preview of Module 02/12)
 Every workspace has four roles. Memorize the ladder:
@@ -148,7 +148,7 @@ Two surfaces you'll return to constantly:
 1. **Admin portal** (gear ⚙ → Admin portal) — tenant settings, capacity settings, domains, usage metrics. Most governance toggles live here (Module 12).
 2. **Monitoring hub** (left nav → **Monitor**) — every run across the tenant: pipeline runs, notebook/Spark runs, SJD runs, dataflow refreshes, table-maintenance jobs. Your first stop when "did my job run?" or "why is it slow?".
 
-> 🖼️ **![SCREENSHOT: The Monitoring hub (Monitor) showing a list of recent runs with status, item type, duration, and start time columns](assets/01-monitoring-hub.png)**
+> 🧭 **In the Fabric portal:** Left nav → **Monitor** opens the Monitoring hub listing every run (pipelines, notebooks, SJDs, refreshes) with status, type, and duration.
 
 > **Lab 1.2 — Find your way around.** Open the **Admin portal** and locate *Capacity settings*. Open the **Monitor** hub (it'll be empty until you run something in later modules).
 

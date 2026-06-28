@@ -89,7 +89,7 @@ Four roles, a strict ladder. **Always assign Microsoft Entra security groups, ne
 
 > ⚠️ **The OneLake-security bypass nuance (memorize this):** granular **OneLake security roles** (row/column/table) apply **only to Viewers**. **Admin/Member/Contributor bypass them.** So to enforce data-level security on a user, they must be a **Viewer** *plus* subject to OneLake security roles. You cannot data-restrict a Contributor.
 
-> 🖼️ **![SCREENSHOT: Workspace → Manage access pane showing the four roles assigned to security groups](assets/02-workspace-roles.png)**
+> 🧭 **In the Fabric portal:** Workspace → **Manage access** → **+ Add people or groups**; the role dropdown offers **Admin / Member / Contributor / Viewer**.
 
 ---
 
@@ -123,7 +123,7 @@ A **domain** logically groups workspaces by business area; assigning a workspace
 
 **Best practice:** design domains with COE + business + security stakeholders; assign **business owners as domain admins**; **delegate** (don't centralize) certification and default labels; keep Fabric and Purview domain definitions **aligned**.
 
-> 🖼️ **![SCREENSHOT: Admin portal → Domains, showing a domain with its assigned workspaces and the "Assign workspaces by name/by owner/by capacity" options](assets/02-domains.png)**
+> 🧭 **In the Fabric portal:** Settings ⚙ → **Admin portal** → **Domains**. Create a domain, then **Assign workspaces** by name / owner / capacity.
 
 ---
 

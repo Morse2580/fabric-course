@@ -131,7 +131,7 @@ Rules:
 
 > **Lab 9.1 — Build a Direct Lake model.** On `WH_STORE_Gold` (or a Gold Lakehouse), create a Direct Lake semantic model over `fact_sales` + `dim_customer/product/store/date`. Set one-to-many single-direction relationships, mark the date table, confirm it's Direct Lake (not fallen back). Check memory/fallback behavior in the model's settings.
 
-> 🖼️ **![SCREENSHOT: The semantic model "Model view" in Fabric web showing the star schema with one-to-many relationships, and the storage-mode indicator showing "Direct Lake" — capture from your own tenant](assets/09-direct-lake-model.png)**
+> 🧭 **In the Fabric portal:** From a Lakehouse/Warehouse toolbar → **New semantic model** → pick fact + dim tables. In **Model view**, drag dim→fact to create **1-to-many** relationships; the storage mode reads **Direct Lake**.
 
 ### Import vs. Direct Lake — the trade-off table
 

@@ -2,7 +2,7 @@
 
 > A practitioner's course and **information framework** for building, organizing, and operating Microsoft Fabric well — for **data engineers and analysts** who want to get maximum value from the platform.
 
-This is not a feature tour. It's a **decision-and-practice framework**. For every major choice in Fabric — Lakehouse vs. Warehouse, Notebook vs. Spark Job Definition, Import vs. Direct Lake, Power BI vs. paginated reports, how to split workspaces, where to put bronze/silver/gold — you get a **decision rule, a recommended default, and the trade-offs**, then a hands-on walkthrough with diagrams and screenshots.
+This is not a feature tour. It's a **decision-and-practice framework**. For every major choice in Fabric — Lakehouse vs. Warehouse, Notebook vs. Spark Job Definition, Import vs. Direct Lake, Power BI vs. paginated reports, how to split workspaces, where to put bronze/silver/gold — you get a **decision rule, a recommended default, and the trade-offs**, then a hands-on walkthrough with diagrams and **exact Fabric portal navigation** (where to click, what you'll see).
 
 ---
 
@@ -62,7 +62,7 @@ The course is built around four recurring choices. Make them deliberately and yo
 | 12 | [Governance, Security & Cost](12-governance-security-cost.md) |
 | 13 | [CI/CD, Git & Deployment Pipelines](13-cicd-deployment.md) |
 | 14 | [The Fabric Operating Model](14-operating-model.md) |
-| — | [Diagram Conventions](DIAGRAM-CONVENTIONS.md) · [Screenshot Manifest](SCREENSHOTS.md) |
+| — | [Diagram Conventions](DIAGRAM-CONVENTIONS.md) |
 | 99 | [Tooling Appendix (fabricstack.dev)](99-tooling-appendix.md) |
 
 ---
@@ -73,4 +73,4 @@ The course is built around four recurring choices. Make them deliberately and yo
 - **As a field reference:** jump to a module; every decision table and checklist stands alone.
 - **As onboarding:** new hires get 00–04 + 14 in week one.
 
-Each module has 🎯 objectives, 📖 concepts, 🧭 decision tables, 🛠️ a hands-on lab, 📐 diagrams, ✅ a checklist, and ⚠️ anti-patterns.
+Each module has 🎯 objectives, 📖 concepts, 🧭 decision tables + **In the Fabric portal** navigation callouts, 🛠️ a hands-on lab, 📐 diagrams, ✅ a checklist, and ⚠️ anti-patterns.

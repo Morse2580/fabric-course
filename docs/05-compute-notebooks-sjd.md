@@ -60,7 +60,7 @@ Both run on the **same Spark compute**, support custom Environments, NEE, and th
 
 > **Default →** Use **notebooks** for almost everything — development, transformation, ML, and even scheduled production logic (they schedule and parameterize cleanly and share high-concurrency sessions). Reach for an **SJD** specifically when you have a **compiled JVM job**, need **automatic queue + retry semantics** for unattended batch, or your CI builds a tested binary artifact you want to "submit" rather than maintain as cells.
 
-> 🖼️ **![SCREENSHOT: Creating a Spark Job Definition — the form showing Main definition file (.py/.jar), Command line arguments, Reference files, and the associated default Lakehouse selector](assets/05-sjd-create.png)**
+> 🧭 **In the Fabric portal:** Workspace → **+ New item** → **Spark Job Definition**. The form has **Main definition file** (.py/.jar/.R), **Command line arguments**, **Reference files**, and a required **default Lakehouse** (right panel → Add lakehouse).
 
 ### Note: every SJD needs a default lakehouse
 An SJD requires **at least one associated default lakehouse** — it becomes the default filesystem and resolves relative paths. Set it when you create the SJD.
@@ -108,7 +108,7 @@ An **Environment** item bundles: **Spark runtime version**, **pool selection**, 
 
 > Workspace admins must enable **"Customize compute configurations for items"** for item-level overrides; otherwise everything uses the workspace default pool. Standardize an Environment per medallion layer or per team.
 
-> 🖼️ **![SCREENSHOT: A Fabric Environment item showing the three tabs — Libraries (public/custom), Spark compute (pool, driver/executor sizing, Acceleration→Native Execution Engine toggle), and Spark properties](assets/05-environment.png)**
+> 🧭 **In the Fabric portal:** Workspace → **+ New item** → **Environment**. The **Spark compute** tab holds the pool, driver/executor sizing, and **Acceleration → Enable native execution engine**; **Libraries** and **Spark properties** are separate tabs.
 
 ### 4.3 High-concurrency mode (a major cost lever)
 One running Spark application hosts multiple notebooks, each isolated in its own **REPL core**, with FAIR scheduling. **Up to 36× faster session start** vs. a cold custom pool.
@@ -127,7 +127,7 @@ A vectorized **C++** engine (Velox + Apache Gluten) that runs columnar/SIMD. **N
 ### 4.5 V-Order
 Fabric's write optimization (sort + encode + compress within Parquet). ~15% write cost for up to ~50% better compression and **much faster Direct Lake** reads (Module 09). Applied on write or during `OPTIMIZE`. **Only the Spark kernel can write V-Order.**
 
-> 🖼️ **![SCREENSHOT: A running notebook with the %%configure cell at the top enabling NEE, and the Spark session indicator showing "high concurrency" in the status bar](assets/05-notebook-configure.png)**
+> 🧭 **In the Fabric portal:** Open a **Notebook**; put **`%%configure`** in the first cell to set NEE/session config. The session status (and *high concurrency*) shows in the notebook toolbar.
 
 ---
 

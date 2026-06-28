@@ -2,7 +2,7 @@
 
 > An end-to-end information framework for **building, organizing, and operating** Microsoft Fabric well — written for **data engineers and analysts** who need to get the maximum value out of the platform.
 
-This is not a feature tour. It is a **decision-and-practice framework**: for every major choice in Fabric (Lakehouse vs. Warehouse, Notebook vs. Spark Job Definition, Import vs. Direct Lake, Power BI vs. paginated reports, how to split workspaces, where to put bronze/silver/gold) the course gives you a **decision rule, a recommended default, and the trade-offs** — then walks you through implementing it with diagrams, screenshots, and hands-on labs.
+This is not a feature tour. It is a **decision-and-practice framework**: for every major choice in Fabric (Lakehouse vs. Warehouse, Notebook vs. Spark Job Definition, Import vs. Direct Lake, Power BI vs. paginated reports, how to split workspaces, where to put bronze/silver/gold) the course gives you a **decision rule, a recommended default, and the trade-offs** — then walks you through implementing it with diagrams, exact **Fabric portal navigation**, and hands-on labs.
 
 ---
 
@@ -26,7 +26,7 @@ Each module is a self-contained markdown file with:
 - 📖 **Concepts** — the mental model, explained from first principles.
 - 🧭 **Decision frameworks** — tables and flowcharts for "which should I use?".
 - 🛠️ **Hands-on lab** — a concrete build you follow along with.
-- 🖼️ **Screenshots** — marked `![SCREENSHOT: ...]` placeholders telling you exactly what to capture (see *Producing the screenshots* below).
+- 🧭 **In the Fabric portal** — exact navigation paths (where to click, what you'll see) for every UI step.
 - 📐 **Diagrams** — Mermaid diagrams you can render in any markdown viewer, VS Code, or a docs site.
 - ✅ **Best-practice checklist** — the "do this" summary you can lift into a runbook.
 - ⚠️ **Anti-patterns** — the traps to avoid.
@@ -81,7 +81,6 @@ Each module is a self-contained markdown file with:
 |---|---|
 | [DOCS-SITE.md](docs/DOCS-SITE.md) | How to publish this as a clean docs site (MkDocs Material — already scaffolded: `mkdocs.yml`, `requirements.txt`, `index.md`, GitHub Action). Run `mkdocs serve`. |
 | [DIAGRAM-CONVENTIONS.md](docs/DIAGRAM-CONVENTIONS.md) | The visual language: Mermaid + the generic **solution-design notation** ([legend SVG](docs/assets/notation-legend.svg)). |
-| [SCREENSHOTS.md](docs/SCREENSHOTS.md) | Every screenshot the course needs, what it shows, and whether to grab it from Microsoft Learn online or capture it in your tenant. |
 
 ---
 
@@ -98,22 +97,13 @@ See [DOCS-SITE.md](docs/DOCS-SITE.md) for the recommendation rationale, hosting 
 
 ---
 
-## Producing the screenshots
+## Following along in the Fabric portal
 
-This repository ships with **screenshot placeholders** rather than baked-in images, so the course stays current as the Fabric UI evolves and so your screenshots can show *your* tenant. Each placeholder looks like:
+Instead of static screenshots (which the Fabric UI quickly outdates), every UI step is an inline **🧭 In the Fabric portal** callout giving the exact click-path and what you'll see — for example:
 
-```
-![SCREENSHOT: Workspace settings → License info, showing the Fabric capacity assignment dropdown](docs/assets/02-capacity-assignment.png)
-```
+> 🧭 **In the Fabric portal:** Left nav → **Workspaces** → **+ New workspace**. Name it, expand **▸ Advanced**, and set **License mode → Fabric capacity**.
 
-To complete the course visually:
-
-1. Sign in to [app.fabric.microsoft.com](https://app.fabric.microsoft.com) (a **Fabric trial** capacity is enough for almost every lab).
-2. Walk each lab in your own tenant.
-3. Capture the screen described in each placeholder and save it to `assets/` using the filename in the placeholder.
-4. The image then renders inline automatically.
-
-> Tip: keep a dedicated `Course-Demo` workspace and a throwaway capacity so your screenshots are clean and reproducible.
+To follow along live, sign in to [app.fabric.microsoft.com](https://app.fabric.microsoft.com) (a **Fabric trial** capacity covers almost every lab) and keep a dedicated `Course-Demo` workspace.
 
 ---
 

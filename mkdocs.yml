@@ -101,8 +101,6 @@ nav:
       - "14 · The Operating Model": 14-operating-model.md
   - Reference:
       - "Diagram Conventions": DIAGRAM-CONVENTIONS.md
-      - "Screenshot Manifest": SCREENSHOTS.md
-      - "Screenshot Capture Labs": SCREENSHOT-LABS.md
       - "Publishing this site": DOCS-SITE.md
       - "99 · Tooling Appendix": 99-tooling-appendix.md
 

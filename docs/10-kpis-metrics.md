@@ -61,7 +61,7 @@ Now **one** calc group gives *every* base measure (`Sales`, `Margin`, `Units`…
 - **Author natively in Power BI Desktop** (since mid-2024) or in **Tabular Editor** (preferred for power users/scripting — see [tooling appendix](99-tooling-appendix.md)).
 - Use a **dynamic format string** so YoY% renders as a percentage automatically.
 
-> 🖼️ **![SCREENSHOT: The Calculation groups authoring pane in Power BI Desktop (or Tabular Editor) showing calculation items Current / YoY / YoY% / YTD — capture from your own tenant](assets/10-calculation-groups.png)**
+> 🧭 **In the Fabric portal:** In **Power BI Desktop → Model view**, right-click → **Calculation group** (or use **Tabular Editor**); add calculation items *Current / YoY / YoY% / YTD*.
 
 ---
 
@@ -84,7 +84,7 @@ flowchart TB
     EN --> R[Reports] & N[Notebooks] & A[AI agents / apps]
 ```
 
-> 🖼️ **![SCREENSHOT: The Metrics hub / a Metric set showing a defined metric with its base measure, dimensions, time grain, and a Certified endorsement badge — findable on Microsoft Learn's "Create and manage metric sets" page](assets/10-metric-sets.png)**
+> 🧭 **In the Fabric portal:** In the Fabric service, open the **Metrics hub** (or **+ New item → Metric set**) to define a metric on a base measure + dimensions + time grain, and **Certify** it.
 
 ---
 

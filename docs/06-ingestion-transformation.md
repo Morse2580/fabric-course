@@ -187,7 +187,7 @@ How to run maintenance:
 
 > **Cadence:** run maintenance **after major ingest/update activity** — e.g., the last step of your nightly pipeline (see the pipeline diagram in Module 05 §5).
 
-> 🖼️ **![SCREENSHOT: The Lakehouse table context menu → "Maintenance" dialog showing OPTIMIZE (with "Apply V-Order" checkbox) and VACUUM (with retention threshold) options](assets/06-table-maintenance.png)**
+> 🧭 **In the Fabric portal:** In a Lakehouse, **right-click a table** (or **…**) → **Maintenance** → tick **OPTIMIZE** (and *Apply V-Order*) and **VACUUM** (retention threshold).
 
 ---
 

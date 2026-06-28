@@ -58,7 +58,7 @@ Key rules and limits:
 - **Limits:** 100,000 shortcuts/item; 10 per path; max 5 **chained**; **no spaces in names** (breaks Delta recognition); **no cascading deletes**; schema shortcuts require a schema-enabled lakehouse.
 - ⚠️ **Identity passthrough gotcha:** internal shortcuts use the caller's identity, **but Direct Lake-over-SQL / T-SQL Delegated mode does *not* pass caller identity.** Use **Direct Lake over OneLake** or **T-SQL User-identity mode** when you need passthrough.
 
-> 🖼️ **![SCREENSHOT: New shortcut dialog showing the source choices — OneLake, ADLS Gen2, Amazon S3, Google Cloud Storage, Dataverse (findable on Microsoft Learn's "OneLake shortcuts" page)](assets/03-new-shortcut.png)**
+> 🧭 **In the Fabric portal:** In a Lakehouse, hover **Tables** or **Files** → **…** → **New shortcut**, then pick a source: OneLake, ADLS Gen2, Amazon S3, Google Cloud Storage, Dataverse, …
 
 ---
 
@@ -102,7 +102,7 @@ External access goes through a **connection** object that stores the endpoint + 
 
 > **Lab 3.0 — Connect something external.** Create an **external shortcut** to a public ADLS/S3 path (or a OneLake item in another workspace). Confirm the data appears under `Tables/` or `Files/` with **no copy**. Then create a **connection** with a service principal and note how it's reused across items.
 
-> 🖼️ **![SCREENSHOT: "Manage connections and gateways" page showing a cloud connection with its authentication method, and an on-premises data gateway cluster — findable on Microsoft Learn's data-gateway docs](assets/03-connections-gateways.png)**
+> 🧭 **In the Fabric portal:** Settings ⚙ → **Manage connections and gateways** to create a connection (with its auth method) or register an **on-premises data gateway**.
 
 ---
 
@@ -135,7 +135,7 @@ flowchart TD
 
 > **Default →** **Lakehouse** when unsure (it's the more flexible superset for engineering and data science). Move/serve gold in a **Warehouse** when a SQL-first team needs writeable T-SQL marts with transactions. **The most common production pattern: Lakehouse for Spark ELT (bronze/silver) + Warehouse for the T-SQL gold/serving layer**, both in one workspace, joined via shortcuts.
 
-> 🖼️ **![SCREENSHOT: Side-by-side of a Lakehouse explorer (Tables/Files) and a Warehouse object explorer (Schemas/Tables/Views/Stored procedures) — capture from your own tenant](assets/03-lakehouse-vs-warehouse.png)**
+> 🧭 **In the Fabric portal:** Open a **Lakehouse** — its explorer shows **Tables / Files** (read-only SQL endpoint). Open a **Warehouse** — its object explorer shows **Schemas → Tables / Views / Stored procedures / Functions** (writeable T-SQL).
 
 ---
 

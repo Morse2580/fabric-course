@@ -156,7 +156,7 @@ flowchart LR
     ALL[Governance · Security · Cost · CI/CD<br/>Mod 12-13] -.wraps everything.-> SRC
 ```
 
-> 🖼️ **![SCREENSHOT: The Microsoft Fabric home page (app.fabric.microsoft.com) showing the workload switcher in the bottom-left and the list of recent items](assets/00-fabric-home.png)**
+> 🧭 **In the Fabric portal:** Sign in at **app.fabric.microsoft.com**. **Home** is the landing page; the **workload switcher** sits at the bottom-left of the left nav, and recent/recommended items fill the canvas.
 
 ---
 

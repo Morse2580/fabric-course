@@ -163,4 +163,4 @@ flowchart LR
 
 ---
 
-**Appendix:** [Module 99 · Tooling Appendix (fabricstack.dev) →](99-tooling-appendix.md) · **Diagrams:** [DIAGRAM-CONVENTIONS.md](DIAGRAM-CONVENTIONS.md) · **Screenshots:** [SCREENSHOTS.md](SCREENSHOTS.md)
+**Appendix:** [Module 99 · Tooling Appendix (fabricstack.dev) →](99-tooling-appendix.md) · **Diagrams:** [DIAGRAM-CONVENTIONS.md](DIAGRAM-CONVENTIONS.md)
