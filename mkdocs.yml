@@ -75,6 +75,9 @@ markdown_extensions:
 plugins:
   - search
 
+extra_css:
+  - assets/extra.css
+
 nav:
   - Home: index.md
   - "00 · Overview & Mental Model": 00-overview.md

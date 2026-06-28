@@ -1,0 +1,58 @@
+/* ── Polish layer for the Fabric course site ── */
+
+/* Center and frame images (screenshots, SVG diagrams) so pages read cleanly */
+.md-typeset p > img:only-child,
+.md-typeset p > a:only-child > img {
+  display: block;
+  margin: 1.4rem auto;
+  max-width: 100%;
+}
+
+.md-typeset img {
+  border-radius: 10px;
+}
+
+/* Screenshots get a soft frame; SVG diagrams stay borderless and airy */
+.md-typeset img[src$=".png"] {
+  box-shadow: 0 2px 16px rgba(20, 30, 60, 0.10);
+  border: 1px solid rgba(20, 30, 60, 0.06);
+}
+
+/* Mermaid diagrams: center and give breathing room */
+.md-typeset .mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.4rem 0;
+}
+
+/* Tidy tables: full-width, subtle zebra, comfortable padding */
+.md-typeset table:not([class]) {
+  width: 100%;
+  font-size: 0.78rem;
+}
+.md-typeset table:not([class]) th {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+  font-weight: 600;
+}
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background: rgba(20, 30, 60, 0.025);
+}
+
+/* Homepage role cards spacing */
+.md-typeset .grid.cards > :is(ul, ol) > li,
+.md-typeset .grid > .card {
+  border-radius: 12px;
+}
+
+/* Slightly tighter, calmer headings */
+.md-typeset h2 {
+  margin-top: 2.2rem;
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba(20, 30, 60, 0.06);
+}
+
+/* Make the medallion emoji + "Default →" cues pop a touch */
+.md-typeset blockquote {
+  border-left-width: 4px;
+}
