@@ -98,13 +98,9 @@ Each hop = a copy, a credential, a failure point.
 
 ## Microsoft Fabric: one unified, SaaS platform
 
-<v-clicks>
-
 - **SaaS, not PaaS** — buy *capacity*, not clusters & storage accounts
 - **OneLake** — one tenant-wide lake; *one copy of data* for every engine
 - **Open format** — everything is **Delta-Parquet**; no lock-in
-
-</v-clicks>
 
 <div class="pt-4">
 
@@ -450,13 +446,9 @@ flowchart LR
   CORE --> P4[Cache → operational]
 ```
 
-<v-clicks>
-
 - One transformation, one quality gate → **many disposable projections**
 - **SCD type chosen at serving time** — Type 1 or Type 2 from the same data, no new ETL
 - Consumers bind to a **contract / semantic intent**, never to your internal columns
-
-</v-clicks>
 
 ---
 
